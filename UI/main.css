@@ -1,0 +1,374 @@
+/* General Styles */
+@import url('https://fonts.googleapis.com/css?family=Rubik');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+    font-family: 'Rubik', sans-serif;
+    color: #442C2E;
+}
+
+button{
+    font-size: 16px;
+    line-height: 1.5;
+    padding: .5em 2em;
+    background: #FFFFFF;
+    border: 2px solid #4D5259;
+    box-shadow: 4px 4px 0 0 #4D5259;
+    margin-top: 16px;
+    outline: none;
+    cursor: pointer;
+}
+
+input[type=text], 
+input[type=password], 
+input[type=email], 
+input[type=search],
+input[type=date],
+input[type=time],
+input[type=number],
+textarea{
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    color: #828282;
+    border: 1px solid rgba(209,209,209,0.56);
+    border-radius: 3px;
+    padding-left: 15px;
+    outline-color: #0067f5;
+    margin-top: 15px;
+}
+
+.hamburger .line{
+    display: none;
+    width: 30px;
+    height: 2px;
+    background-color: #442C2E;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger:hover{
+    cursor: pointer;
+}
+
+.hamburger-active .line:nth-child(2){
+    opacity: 0;
+}
+
+.hamburger-active .line:nth-child(1){
+    transform: translateY(7px) rotate(45deg)
+}
+
+.hamburger-active .line:nth-child(3){
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+.open{
+    display: block !important;
+}
+
+.backdrop {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+.main-header{
+    padding: 1rem 2rem;
+    /* position: fixed; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FEDBD0;
+    box-shadow: 0px 4px 8px rgb(0,0,0,0.5);
+    z-index: 2;
+}
+
+.main-header > div{
+    display: flex;
+    align-items: center;
+}
+
+.main-header__brand{
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.mobile-nav{
+    position: fixed;
+    display: none;
+    width: 60%;
+    height: 100vh;
+    background: #FEDBD0;
+    top: 0;
+    left: 0;
+    z-index: 101;
+}
+
+.mobile-nav__items{
+    width: 90%;
+    list-style: none;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.mobile-nav__item{
+    margin: 1rem 0;
+    padding: 1rem;
+}
+
+.mobile-nav__items li:hover{
+    box-shadow: 0px 0px 4px lightsteelblue;
+    background-color: aquamarine;
+}
+
+#first-list{
+    margin-top: 3.8rem;
+}
+
+.main-nav__items {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav__item{
+    margin: 0 1rem;
+}
+
+.main-nav__item a,
+.mobile-nav__item a{
+    text-decoration: none;
+    opacity: 0.75;
+    color: black;
+}
+
+.main-nav__item a:hover,
+.mobile-nav__item a:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-display{
+    min-height: 100vh;
+    justify-content: center;
+    text-align: center; 
+}
+
+.main-display__background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: url(assets/img/background-image.jpg) left 0% top 40%/cover no-repeat border-box hsl(200, 33%, 96%);
+    z-index: -1;
+}
+
+.main-display__content{
+    display: flex;
+    background-color: #FEEAE6;
+    height: 45vh;
+    width: 70%;
+    position: absolute;
+    top: 70%;
+    text-align: left;
+}
+
+.main-display__content h2,
+.main-display__content p{
+    margin-bottom: 0.5rem;
+}
+
+.main-display__text,
+.discover-brands{
+    padding: 2rem;
+}
+
+.features-section__title{
+    margin-top: 8rem;
+}
+
+.features{
+    display: flex;
+    padding: 2rem;
+}
+
+.features-list{
+    width: 33%;
+    padding: 1rem;
+}
+
+.features-list *{
+    margin-bottom: 0.5rem;
+}
+
+.assurance{
+    padding: 1rem 3rem;
+}
+
+.assurance-details{
+    display: flex;
+}
+
+.assurance-content{
+    width: 60%;
+}
+
+.assurance-key__points{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin-left: 5rem;
+}
+
+.assurance-key__points div{
+    display: flex;
+}
+
+footer{
+    background-color: #FEDBD0;
+}
+
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3.5rem;
+}
+
+.footer-content > *{
+    margin-bottom: 0.5rem;
+}
+
+.social-media__icons a{
+    margin-right: 0.5rem;
+    text-decoration: none;
+}
+
+.social-media__icons i{
+    color: #442C2E;
+}
+
+.legal-info{
+    text-align: center;
+    border-top: 1px solid lightpink;
+    padding: 0.3rem;
+}
+
+/* Sign Up */
+.signup-form__container{
+    max-width: 500px;
+    border-radius: 8px;
+    border: 1px solid hsl(200, 33%, 96%);
+    background-color: white;
+    border-top: 8px solid #FEDBD0;
+    padding: 1.5rem;
+    margin: 3.4rem auto;
+}
+
+.sign-up__cta{
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.sign-up__space{
+    text-align: center;
+    padding: 1rem 0rem;
+}
+
+.name-details{
+    width: 100%;
+}
+
+.name-details input[type=text]{
+    width: 49%;
+}
+
+/* Small display */
+@media only screen and (max-width: 767px){
+    .main-nav,
+    .discover-brands{
+        display: none;
+    }
+    .hamburger .line{
+        display: block;
+    }
+    .main-display{
+        min-height: 80vh;
+    }
+    .main-display__background{
+        height: 80%;
+    }
+    .main-display__content,
+    .features,
+    .assurance-details{
+        flex-direction: column;
+    }
+    .main-display__content{
+        position: static;
+    }
+    .main-display__text{
+        padding: 1rem;
+    }
+    .features-section{
+        text-align: center;
+    }
+    .features-section__title{
+        margin-top: 1rem;
+    }
+    .features-list,
+    .assurance-content{
+        width: 100%;
+    }
+    .assurance-key__points{
+        margin: 0;
+        width: 100%;
+    }
+    .footer-container{
+        flex-direction: column;
+    }
+    .signup-form__container{
+        width: 90%;
+    }
+    .name-details input[type=text]{
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+    .main-display{
+        min-height: 70vh;
+    }
+    .main-display__background{
+        height: 70%;
+    }
+    .main-display__content{
+        height: 40vh;
+        top: 40%;
+    }
+    .features-section__title{
+        margin-top: 10rem;
+    }
+}
